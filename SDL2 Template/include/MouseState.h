@@ -5,7 +5,7 @@
 struct MouseState
 {
     MouseState()
-        :x(0.0f), y(0.0f)
+        :x(0.0), y(0.0)
     {
         down = false;
     }

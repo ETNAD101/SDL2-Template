@@ -29,8 +29,6 @@ MouseState mouse;
 
 int i = 0;
 
-Button b = Button(Vector2f(WIDTH / 2, HEIGHT / 2), "0", window.loadFont(FONT_PATH, 50), &mouse, window.getRenderer());
-
 void init()
 {
     if (SDL_Init(SDL_INIT_VIDEO) > 0)
@@ -79,16 +77,6 @@ void update()
     
     SDL_GetMouseState(&mouse.x, &mouse.y);
     
-    if (mouse.down)
-    {
-        if (b.pressed())
-        {
-            i++;
-            b.setMessage(std::to_string(i));
-        }
-        mouse.down = false;
-    }
-  
 }
 
 
@@ -100,8 +88,7 @@ void graphics()
 
     // Adding Entities to Renderer
     window.background(220, 220, 220, 255);
-    window.render(b);
-    
+
     // Displaying Renderer
     window.display();
 }

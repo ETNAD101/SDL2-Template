@@ -45,12 +45,12 @@ void Entity::setPos(float p_x, float p_y)
 
 void Entity::setX(float p_x)
 {
-    pos.x = p_x - currentFrame.w / 2;
+    pos.x = p_x;
 }
 
 void Entity::setY(float p_y)
 {
-    pos.y = p_y - currentFrame.h / 2;
+    pos.y = p_y;
 }
 
 // Position Getters
@@ -62,12 +62,12 @@ Vector2f& Entity::getPos()
 
 float Entity::top()
 {
-    return pos.x - currentFrame.h / 2;
+    return pos.y - currentFrame.h / 2;
 }
 
 float Entity::bottom()
 {
-    return pos.x + currentFrame.h / 2;
+    return pos.y + currentFrame.h / 2;
 }
 
 float Entity::left()
@@ -89,4 +89,14 @@ bool Entity::touching(int p_x, int p_y)
     bool c = p_x > left();
     bool d = p_x < right();
     return a && b && c && d;
+}
+
+bool Entity::boxCollision(Entity& e)
+{
+    return (
+        (this->top() < e.bottom()) &&
+        (this->bottom() > e.top()) &&
+        (this->left() < e.right()) &&
+        (this->right() > e.left())
+        );
 }
