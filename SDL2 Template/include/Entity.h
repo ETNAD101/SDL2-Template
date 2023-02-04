@@ -30,7 +30,7 @@ public:
 
     // Collision
     bool touching(int p_x, int p_y);
-    bool boxCollision(Entity& e);
+    
 
 private:
     Vector2f pos;

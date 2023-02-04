@@ -160,6 +160,7 @@
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Message.cpp" />
     <ClCompile Include="src\RenderWindow.cpp" />
+    <ClCompile Include="src\RigidBody.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\fonts\Roboto-Light.ttf" />
@@ -176,6 +177,7 @@
     <ClInclude Include="include\Message.h" />
     <ClInclude Include="include\MouseState.h" />
     <ClInclude Include="include\RenderWindow.h" />
+    <ClInclude Include="include\RigidBody.h" />
     <ClInclude Include="include\Settings.h" />
     <ClInclude Include="include\Vector2.h" />
   </ItemGroup>

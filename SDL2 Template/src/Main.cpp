@@ -1,17 +1,18 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
-
 #include <iostream>
 #include <vector>
 #include <string>
+
+#include "Settings.h"
 #include "RenderWindow.h"
 #include "Vector2.h"
+#include "MouseState.h"
 #include "Entity.h"
+#include "RigidBody.h"
 #include "Message.h"
 #include "Button.h"
-#include "MouseState.h"
-#include "Settings.h"
 
 // Delta time variables
 Uint64 NOW = SDL_GetPerformanceCounter();
@@ -76,7 +77,7 @@ void update()
     deltaTime = (double)((NOW - LAST) * 1000 / (double)SDL_GetPerformanceFrequency());
     
     SDL_GetMouseState(&mouse.x, &mouse.y);
-    
+
 }
 
 

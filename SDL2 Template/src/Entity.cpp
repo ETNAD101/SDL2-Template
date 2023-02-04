@@ -90,13 +90,3 @@ bool Entity::touching(int p_x, int p_y)
     bool d = p_x < right();
     return a && b && c && d;
 }
-
-bool Entity::boxCollision(Entity& e)
-{
-    return (
-        (this->top() < e.bottom()) &&
-        (this->bottom() > e.top()) &&
-        (this->left() < e.right()) &&
-        (this->right() > e.left())
-        );
-}
