@@ -35,19 +35,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="res\fonts\Roboto-Light.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\gfx\x.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="res\gfx\o.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="res\gfx\board.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="res\gfx\centerTool.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

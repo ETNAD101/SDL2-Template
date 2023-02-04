@@ -163,13 +163,7 @@
     <ClCompile Include="src\RigidBody.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Font Include="res\fonts\Roboto-Light.ttf" />
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="res\gfx\board.png" />
-    <Image Include="res\gfx\centerTool.png" />
-    <Image Include="res\gfx\o.png" />
-    <Image Include="res\gfx\x.png" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Button.h" />
