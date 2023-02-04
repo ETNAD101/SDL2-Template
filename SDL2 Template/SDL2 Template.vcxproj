@@ -163,9 +163,6 @@
     <ClCompile Include="src\RigidBody.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\gfx\board.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="include\Button.h" />
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\Message.h" />
