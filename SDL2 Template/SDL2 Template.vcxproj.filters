@@ -53,7 +53,7 @@
     <ClInclude Include="include\Button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\MouseState.h">
+    <ClInclude Include="include\UserInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\RigidBody.h">

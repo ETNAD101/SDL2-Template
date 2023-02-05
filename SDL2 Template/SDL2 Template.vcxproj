@@ -166,7 +166,7 @@
     <ClInclude Include="include\Button.h" />
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\Message.h" />
-    <ClInclude Include="include\MouseState.h" />
+    <ClInclude Include="include\UserInput.h" />
     <ClInclude Include="include\RenderWindow.h" />
     <ClInclude Include="include\RigidBody.h" />
     <ClInclude Include="include\Settings.h" />

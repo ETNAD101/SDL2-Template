@@ -1,9 +1,9 @@
 #include "RigidBody.h"
 #include "Entity.h"
-#include "MouseState.h"
+#include "UserInput.h"
 
-RigidBody::RigidBody(Vector2f p_pos, int p_w, int p_h, SDL_Texture* p_tex, MouseState* p_mouse)
-    :Entity(p_pos, p_w, p_h, p_tex), mouse(p_mouse)
+RigidBody::RigidBody(Vector2f p_pos, int p_w, int p_h, SDL_Texture* p_tex, UserInput* p_input)
+    :Entity(p_pos, p_w, p_h, p_tex), input(p_input)
 {
     velocity.x = 0;
     velocity.y = 0;

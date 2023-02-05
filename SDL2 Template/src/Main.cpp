@@ -3,12 +3,13 @@
 #include <SDL2/SDL_ttf.h>
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <string>
 
 #include "Settings.h"
 #include "RenderWindow.h"
 #include "Vector2.h"
-#include "MouseState.h"
+#include "UserInput.h"
 #include "Entity.h"
 #include "RigidBody.h"
 #include "Message.h"
@@ -26,7 +27,7 @@ RenderWindow window(TITLE, WIDTH, HEIGHT);
 SDL_Event event;
 bool running = true;
 
-MouseState mouse;
+UserInput input;
 
 int i = 0;
 
@@ -52,15 +53,23 @@ void events()
 
         switch (event.type) {
         case SDL_MOUSEBUTTONDOWN:
-            mouse.down = true;
+            input.mouseDown = true;
             break;
 
         case SDL_MOUSEBUTTONUP:
-            mouse.down = false;
+            input.mouseDown = false;
             break;
 
         case SDL_QUIT:
             running = false;
+            break;
+
+        case SDL_KEYDOWN:
+            input.addKey(event.key.keysym.sym);
+            break;
+
+        case SDL_KEYUP:
+            input.removeKey(event.key.keysym.sym);
             break;
 
         default:
@@ -76,7 +85,7 @@ void update()
     NOW = SDL_GetPerformanceCounter();
     deltaTime = (double)((NOW - LAST) * 1000 / (double)SDL_GetPerformanceFrequency());
     
-    SDL_GetMouseState(&mouse.x, &mouse.y);
+    SDL_GetMouseState(&input.mouseX, &input.mouseY);
 
 }
 
@@ -88,7 +97,7 @@ void graphics()
     window.clear();
 
     // Adding Entities to Renderer
-    window.background(220, 220, 220, 255);
+    window.background(255, 255, 255, 255);
 
     // Displaying Renderer
     window.display();
